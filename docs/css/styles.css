@@ -1,0 +1,518 @@
+/* Variáveis para facilitar a manutenção */
+:root {
+    --primary-color: #2563eb;
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --text-white: #f8fafc;
+    --text-gray: #94a3b8;
+    --bg-color: #91CEFF;
+    --hero-color: #91F0FF;
+    --shadow: 0px 18px 60px rgba(13, 19, 36, .40);
+    --shadow-card: 0px 18px 60px rgba(13, 19, 36, .40);
+    --main-color:#6e9fc1;
+}
+
+.jim-nightshade-regular {
+  font-family: "Jim Nightshade", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #e9ecee;
+    color: var(--text-white);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background:
+        url(/docs/img/bg/bright-squares.png),
+        radial-gradient(             
+            rgba(217, 244, 255, 0.8) 0%,  
+            rgba(0, 0, 0, 0) 40%,   
+            rgba(0, 0, 0, 0) 60%,   
+            rgba(1, 54, 92, 0.5) 100%  
+        ),
+        #e9ecee;
+    filter: saturate(1.1) brightness(1.0) contrast(1.2);
+    /* background-image: url(/docs/img/bg/asfalt-light.png);     */
+         
+    
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 10%;
+    /* background: #6e9fc1; */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-size: 20px;
+    /* background: 
+        linear-gradient(
+            to left,              
+            rgba(217, 244, 255, 0.8) 0%,  
+            rgba(0, 0, 0, 0) 60%,   
+            rgba(0, 0, 0, 0) 60%,   
+            rgba(1, 54, 92, 0.9) 100%  
+        ),
+        rgb(110, 159, 193) */
+    color: var(--main-color);
+    font-size: 30px;
+    
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-white);
+    text-shadow: 1px 5px 6px rgba(13, 19, 36, .30);
+    font-weight: 500;
+    transition: 0.3s;
+   
+    
+   
+}
+
+.nav-links a:hover {
+    text-shadow: 2px 2px var(--bg-color);
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #6e9fc1;
+    padding: 50px;
+    width: 1600px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    background: 
+        linear-gradient(
+            to bottom,              
+            rgba(217, 244, 255, 0.8) 0%,  
+            rgba(0, 0, 0, 0) 40%,   
+            rgba(0, 0, 0, 0) 65%,   
+            rgba(1, 54, 92, 0.9) 100%  
+        ),
+        rgb(110, 159, 193);
+
+    transition: 0.5s;    
+    
+}
+
+.hero-content:hover{
+    transform: scale(1.02);
+}
+
+.profile{
+    margin-left: 50px;
+    margin-top: 15px;
+    
+}
+
+.frierenSide img{
+    position: absolute;
+    right: -100px;
+    bottom: 0px;
+    height: 750px;
+    transition: 0.5s;
+    filter: brightness(85%);
+}
+
+.frierenSide img:hover{
+    transform: translateX(-15px);
+    filter: brightness(110%);
+}
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%;
+    z-index: 999;
+    margin-left: 70px;
+    text-align: start;
+    font-weight: 500;
+    text-align: left;
+    color: #f8fafc;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Dá um leve destaque */
+    height: fit-content;
+    font-size: x-large;
+    text-shadow: 2px 2px 10px rgba(13, 19, 36, .30);
+    border-radius: 20px;
+    padding: 15px;
+    
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+}
+
+/* Seções de Projetos */
+.projects-section {
+    padding: 5rem 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #6e9fc1;
+     text-shadow: 3px 3px white;
+}
+
+
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    background-color: #638dac;
+    
+}
+
+.tech-tag {
+    display: inline-block;
+    background: #334155;
+    color: var(--primary-color);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+a{
+    text-decoration: none;
+    color: #2A2F33;
+
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+}
+
+
+.projects-grid {
+    display: flex;
+    overflow-x: hidden;
+    padding: 2rem 0;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+
+.project-card p {
+    flex-grow: 1; 
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+
+
+.projects-grid::-webkit-scrollbar {
+    display: none;
+}
+
+
+.project-card {
+    width: 48%;      
+    max-width: 85vw;
+    flex: 0 0 auto;
+    
+    background: #6e9fc1;
+    padding: 2rem;
+    border-radius: 12px;
+    /* border: 1px solid #6e9fc1; */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    transition: 0.5s;
+    box-shadow: 0px 18px 12px rgba(13, 19, 36, .40);;
+    margin: 0px 15px 0px 15px;
+    background: 
+        linear-gradient(
+            to bottom,              
+            rgba(217, 244, 255, 0.8) 0%,  
+            rgba(0, 0, 0, 0) 40%,   
+            rgba(0, 0, 0, 0) 65%,   
+            rgba(1, 54, 92, 0.9) 100%  
+        ),
+        rgb(110, 159, 193);
+}
+
+
+.project-card p {
+    flex-grow: 1; 
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    
+}
+
+.project-card h3{
+    font-weight: 500;
+    text-shadow: 2px 2px 10px black;
+    margin-bottom: 2rem;
+}
+
+
+/* Botões do Carrossel */
+.carousel-btn {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: 0.3s;
+    width: 50px;
+}
+
+
+
+.carousel-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Botão do Projeto */
+.btn-project {
+    width: 35%; /* Opcional: faz o botão ocupar a largura toda do card como na sua print */
+    text-align: center;
+    background-color: #D7E3EE;
+    border-radius: 20px;
+    color: #000;
+    padding: 5px;
+    margin-top: 20px;
+    transition: 0.5s;
+
+
+}
+
+.btn-project:hover{
+    color: var(--bg-color);
+    background: black;
+    
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Posiciona as setas fora da área dos cards para não tampar o texto */
+.carousel-btn.prev {
+    position: absolute;
+    left: -45px;
+}
+
+.carousel-btn.next {
+    position: absolute;
+    right: -50px;
+}
+
+/* Se as setas sumirem da tela, ajuste o padding da seção pai */
+.projects-section {
+    padding: 5rem 15%; /* Aumenta o respiro lateral para as setas caberem */
+}
+
+/* Cores das Tech Tags */
+.tech-tag.js { background: #f7df1e; color: #000; }        /* Amarelo JS */
+.tech-tag.html { background: #e34f26; color: #fff; }      /* Laranja HTML */
+.tech-tag.css { background: #1572b6; color: #fff; }       /* Azul CSS */
+.tech-tag.ts { background: #3178c6; color: #fff; }        /* Azul TS */
+.tech-tag.python { background: #3776ab; color: #fff; }    /* Azul/Amarelo Python */
+.tech-tag.react { background: #61dafb; color: #000; }     /* Ciano React */
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Idealmente aqui você faria um menu hambúrguer */
+    .hero h1 { font-size: 1.8rem; }
+}
+
+
+/* h1, p{
+    text-shadow: 2px 2px black;
+} */
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    
+    
+        
+}
+
+.social-links a{
+    display: flex;
+    align-items: center;
+    filter: brightness(60%);
+    transition: 0.5s;
+
+}
+
+.social-links a:hover{
+    filter: brightness(120%);
+    transform: scale(1.2);
+}
+
+.himmelFlower{
+    position: absolute;
+    top: 50px;
+    left: 75px;
+    width: 300px;
+ 
+}
+
+.skills-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+    margin: 100px 0px 200px 0px;
+
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px black ;
+    /* border: solid var(--bg-color) 2px;  */
+    border-radius: 15px;
+    overflow: hidden;
+    width: 150px;
+    padding: 20px;
+    box-shadow: var(--shadow-card);
+    transition: 0.5s;
+    background-color: #e9ecee;
+    filter: brightness(75%);
+    font-size: 20px;
+    
+    /* background-color: transparent; */
+   
+    
+}
+
+.skill *{
+    margin: 10px;
+}
+
+
+.skill:hover{
+    transform: translateY(-10px);
+    filter: brightness(100%);
+    box-shadow: 0px 18px 60px rgba(5, 72, 255, 0.4);;
+    /* border: solid 2px var(--bg-color) */
+}
+
+
+.skill img{
+    width: 60px;
+    height: 60px;
+}
+
+.skills-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+   
+}
+
+.skills-section h3{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #6e9fc1;
+    text-shadow: 3px 3px white;
+}
+
+.contact-section{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 15px 15px 5px 15px;
+    background: #6e9fc1;
+    border-radius: 15px;
+    background: 
+        linear-gradient(
+            to left,              
+            rgba(217, 244, 255, 0.8) 0%,  
+            rgba(0, 0, 0, 0) 40%,   
+            rgba(0, 0, 0, 0) 65%,   
+            rgba(1, 54, 92, 0.9) 100%  
+        ),
+        rgb(110, 159, 193);
+    
+    box-shadow: var(--shadow);
+}
+
+.contact-btn-row{
+display: flex;
+align-items: center;
+justify-content: center;
+   
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+

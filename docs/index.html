@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio Rainan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- <div class="logo">Rainan</div> -->
+      <ul class="nav-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#academicos">Acadêmicos</a></li>
+        <li><a href="#pessoais">Pessoais</a></li>
+      </ul>
+    </nav>
+
+    <header id="home" class="hero">
+      <div class="hero-content">
+        <!-- <img class="himmelFlower" src="img/himmelFlower.png" alt=""> -->
+        <div class="profile">
+          <img src="img/frierenlinda.jpg" alt="Sua Foto" class="profile-img" />
+          <h1>Rainan</h1>
+          <p>
+            <!-- Estudante de Desenvolvimento de Software Multiplataforma | 2º
+            Semestre -->
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/RainanKaneka" target="_blank"
+              ><img src="img/githubIcon.png" alt="" width="50px" height="50px"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/kaneka-koz-5b4940310/"
+              target="_blank"
+              ><img
+                src="img/linkedinIcon.png"
+                alt=""
+                width="70px"
+                height="70px"
+            /></a>
+          </div>
+        </div>
+        <div class="sobre">
+          <h3>Sobre mim</h3>
+          <p>
+            Tenho 20 anos, atualmente estou cursando Desenvolvimento de Software
+            em Multiplataforma(FATEC), faço websites e tenho experiência na área
+            há 2 anos. Fiz projetos WEB pessoais e academicos que utilizavam
+            principalmente de JS.
+          </p>
+        </div>
+        <div class="frierenSide">
+          <img src="img/frierenArt.png" alt="" />
+        </div>
+      </div>
+    </header>
+
+    <section id="academicos" class="projects-section">
+      <h2 class="section-title">Projetos Acadêmicos</h2>
+
+      <div class="carousel-container">
+        <!-- <button
+          class="carousel-btn prev"
+          onclick="moveSlide(-1, 'academicos-grid')"
+        >
+          &#10094;
+        </button> -->
+
+        <div class="projects-grid" id="academicos-grid">
+          <article class="project-card">
+            <h3>🌱 AgriRS LAB</h3>
+            <p>
+              Projeto desenvolvido no 1º semestre de DSM na FATEC Jacareí. Um
+              website para o AgriRS Lab (Laboratório de Sensoriamento Remoto
+              Agrícola – INPE) que tem como objetivo centralizar informações do
+              laboratório, ampliando sua visibilidade e facilitando o acesso do
+              público às pesquisas, projetos e iniciativas em andamento.
+            </p>
+            <div class="tags">
+              <span class="tech-tag js">JavaScript</span>
+              <span class="tech-tag html">HTML</span>
+              <span class="tech-tag css">CSS</span>
+            </div>
+            <a
+              href="https://github.com/RainanKaneka/ABP-Undefined"
+              class="btn-project"
+              target="_blank"
+              >Visualizar Projeto</a
+            >
+          </article>
+
+          <article class="project-card">
+            <h3>Chatbot FATEC</h3>
+            <p>
+              Um Chatbot feito para a secretária da FATEC Jacareí, com perguntas
+              e respostas pré-definidas que guiam o usuário para uma resposta em
+              relação a faculdade, como por exemplo cursos disponíveism, horário
+              de aulas, eventos, etc.
+            </p>
+            <div class="tags">
+              <span class="tech-tag js">JavaScript</span>
+              <span class="tech-tag html">HTML</span>
+              <span class="tech-tag css">CSS</span>
+            </div>
+            <a
+              href="https://github.com/abpundefined/2DSM-ABP-UNDEFINED/tree/develop"
+              class="btn-project"
+              target="_blank"
+              >Visualizar Projeto</a
+            >
+          </article>
+          <!-- <article class="project-card">
+            <h3>🔢 CriptoComplex</h3>
+            <p>
+              Algoritmo de criptografia utilizando multiplicação de números
+              complexos.
+            </p>
+            <div class="tags">
+              <span class="tech-tag ts">TypeScript</span>
+              <span class="tech-tag python">Python</span>
+            </div>
+            <a href="#" class="btn-project">Visualizar Projeto</a>
+          </article> -->
+        </div>
+
+        <!-- <button
+          class="carousel-btn next"
+          onclick="moveSlide(1, 'academicos-grid')"
+        >
+          &#10095;
+        </button> -->
+      </div>
+    </section>
+
+    <section id="pessoais" class="projects-section bg-light">
+      <h2 class="section-title">Projetos Pessoais</h2>
+      <div class="carousel-container">
+        <!-- <button
+          class="carousel-btn prev"
+          onclick="moveSlide(-1, 'academicos-grid')"
+        >
+          &#10094;
+        </button> -->
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Frierendle</h3>
+            <p>
+              Um jogo de palavras inspirado em Wordle com a temática do anime
+              Sousou no Frieren.
+            </p>
+            <div class="tags">
+              <span class="tech-tag js">JavaScript</span>
+              <span class="tech-tag html">HTML</span>
+              <span class="tech-tag css">CSS</span>
+            </div>
+            <a
+              href="https://github.com/RainanKaneka/frierendle"
+              class="btn-project"
+              target="_blank"
+              >Visualizar Projeto</a
+            >
+          </article>
+          <article class="project-card">
+            <h3>EA Clicker</h3>
+            <p>
+              Um jogo de de clicar inspirado em Cookie Cliker, com a temática de
+              League of Legends, utilizando ao invés de Cookies, as Essencias
+              Azuis.
+            </p>
+            <div class="tags">
+              <span class="tech-tag js">JavaScript</span>
+              <span class="tech-tag html">HTML</span>
+              <span class="tech-tag css">CSS</span>
+            </div>
+            <a
+              href="https://github.com/RainanKaneka/EA_Clicker"
+              class="btn-project"
+              target="_blank"
+              >Visualizar Projeto</a
+            >
+          </article>
+        </div>
+        <!-- <button
+        class="carousel-btn next"
+        onclick="moveSlide(1, 'academicos-grid')"
+      >
+        &#10095;
+      </button> -->
+      </div>
+    </section>
+    <section id="tech-skills" class="skills-section">
+      <h3>Tech Skills</h3>
+      <div class="skills-container">
+        <div class="skill">
+          <img src="img/skills/js_logo1.jpg" class="logoSkills" alt="" />
+          <span>Javascript</span>
+        </div>
+        <div class="skill">
+          <img src="img/skills/html-logo.png" class="logoSkills" alt="" />
+          <span>HTML</span>
+        </div>
+        <div class="skill">
+          <img src="img/skills/R.png" class="logoSkills" alt="" />
+          <span>CSS</span>
+        </div>
+        <div class="skill">
+          <img src="img/skills/pythonLogo.jpg" class="logoSkills" alt="" />
+          <span>Python</span>
+        </div>
+        <div class="skill">
+          <img src="img/skills/OIP.webp" class="logoSkills" alt="" />
+          <span>Typescript</span>
+        </div>
+        <div class="skill">
+          <img src="img/skills/postgreLogo.webp" class="logoSkills" alt="" />
+          <span>Postgres</span>
+        </div>
+        <div class="skill">
+          <img src="img/skills/dockerlogo.webp" class="logoSkills" alt="" />
+          <span>Docker</span>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section">
+      <p>Tem algum projeto em mente? me contate!</p>
+      <div class="contact-btn-row" >
+        <a href="https://www.instagram.com/rainan_kaneka" class="contact-button" target="_blank">
+          <img
+            src="img/skills/instagram-logo-instagram-icon-transparent-free-png.webp"
+            height="60px"
+            width="60px"
+            alt=""
+          />
+          </a>
+        <button
+          class="contact-button"
+          id="copiarBtn">
+           <img
+            src="img/skills/Gmail-Logo.png"
+            height="30px"
+            width="50px"
+            alt=""/>
+
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 - Desenvolvido por Rainan de Oliveira Reis</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
