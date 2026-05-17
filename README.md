@@ -7,7 +7,7 @@ O portfólio está organizado em três seções principais:
 
 ## 💻 Como executar o projeto
 
-Como o projeto é estático e processado do lado do cliente[cite: 1], basta clonar o repositório e abrir o arquivo `index.html` em qualquer navegador moderno:
+Como o projeto é estático e processado do lado do cliente, basta clonar o repositório e abrir o arquivo `index.html` em qualquer navegador moderno:
 
 1. Clone o repositório:
    ```bash
