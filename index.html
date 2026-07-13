@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="docs/css/styles.css" />
@@ -25,11 +25,19 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#academicos">Acadêmicos</a></li>
-        <li><a href="#pessoais">Pessoais</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#sobre" data-i18n="nav_about">Sobre</a></li>
+        <li><a href="#academicos" data-i18n="nav_academic">Acadêmicos</a></li>
+        <li><a href="#pessoais" data-i18n="nav_personal">Pessoais</a></li>
+        <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#contato" data-i18n="nav_contact">Contato</a></li>
+        <li>
+          <button id="lang-toggle" class="lang-toggle" aria-label="Alternar Idioma">EN</button>
+        </li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Alternar Modo Escuro">
+            🌙
+          </button>
+        </li>
       </ul>
     </nav>
 
@@ -37,7 +45,7 @@
       <header id="home" class="hero">
         <div class="hero-inner">
           <section class="hero-copy" aria-labelledby="hero-title">
-            <p class="eyebrow">Desenvolvimento web • FATEC Jacareí</p>
+            <p class="eyebrow" data-i18n="hero_eyebrow">Desenvolvimento web • FATEC Jacareí</p>
             <h1 id="hero-title">Rainan Reis</h1>
             <!-- <p class="hero-lead">
               Desenvolvedor em formação, criando interfaces web com foco em
@@ -50,6 +58,7 @@
                 href="https://github.com/RainanKaneka"
                 target="_blank"
                 rel="noreferrer"
+                data-i18n="btn_github"
               >
                 GitHub
               </a>
@@ -58,6 +67,7 @@
                 href="https://www.linkedin.com/in/kaneka-koz-5b4940310/"
                 target="_blank"
                 rel="noreferrer"
+                data-i18n="btn_linkedin"
               >
                 LinkedIn
               </a>
@@ -71,8 +81,8 @@
               class="profile-img"
             />
             <div>
-              <h2 id="about-title">Sobre mim</h2>
-              <p>
+              <h2 id="about-title" data-i18n="about_title">Sobre mim</h2>
+              <p data-i18n="about_text">
                 Tenho 20 anos e curso Desenvolvimento de Software
                 Multiplataforma na FATEC. Trabalho com projetos web há cerca de
                 2 anos, principalmente com JavaScript, HTML, CSS e soluções para
@@ -90,141 +100,32 @@
 
       <section id="academicos" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Projetos em equipe e faculdade</p>
-          <h2>Projetos Acadêmicos</h2>
+          <p class="eyebrow" data-i18n="academic_eyebrow">Projetos em equipe e faculdade</p>
+          <h2 data-i18n="academic_title">Projetos Acadêmicos</h2>
         </div>
 
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-meta">1º semestre • FATEC</div>
-            <h3>AgriRS LAB</h3>
-            <p>
-              Website para o AgriRS Lab, laboratório de Sensoriamento Remoto
-              Agrícola do INPE. A proposta centraliza informações, pesquisas e
-              iniciativas do laboratório para ampliar visibilidade e acesso.
-            </p>
-            <div class="tags" aria-label="Tecnologias usadas">
-              <span class="tech-tag js">JavaScript</span>
-              <span class="tech-tag html">HTML</span>
-              <span class="tech-tag css">CSS</span>
-            </div>
-            <a
-              href="https://github.com/RainanKaneka/ABP-Undefined"
-              class="project-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Ver repositório
-            </a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta">2º semestre • FATEC</div>
-            <h3>Chatbot FATEC</h3>
-            <p>
-              Chatbot para a secretaria da FATEC Jacareí, com fluxos de
-              perguntas e respostas que ajudam estudantes a encontrar
-              informações sobre cursos, horários, eventos e rotinas acadêmicas.
-            </p>
-            <div class="tags" aria-label="Tecnologias usadas">
-              <span class="tech-tag js">JavaScript</span>
-              <span class="tech-tag html">HTML</span>
-              <span class="tech-tag css">CSS</span>
-            </div>
-            <a
-              href="https://github.com/abpundefined/2DSM-ABP-UNDEFINED/tree/develop"
-              class="project-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Ver repositório
-            </a>
-          </article>
+        <div id="academicos-grid" class="projects-grid">
+          <!-- Projetos carregados dinamicamente via GitHub API -->
+          <p>Carregando projetos...</p>
         </div>
       </section>
 
       <section id="pessoais" class="section section-quiet">
         <div class="section-heading">
-          <p class="eyebrow">Estudo, jogos e experimentos</p>
-          <h2>Projetos Pessoais</h2>
+          <p class="eyebrow" data-i18n="personal_eyebrow">Estudo, jogos e experimentos</p>
+          <h2 data-i18n="personal_title">Projetos Pessoais</h2>
         </div>
 
-        <div class="projects-grid three-col">
-          <article class="project-card">
-            <div class="project-meta">Jogo diário</div>
-            <h3>Frierendle</h3>
-            <p>
-              Jogo de adivinhar inspirado em Loldle com temática de
-              <span lang="ja">Sousou no Frieren</span>, unindo lógica,
-              feedback visual e uma proposta criada para fãs do anime. O objetivo do jogo é acertar o personagem diário de Sousou no Frieren.
-            </p>
-            <div class="tags" aria-label="Tecnologias usadas">
-              <span class="tech-tag js">JavaScript</span>
-              <span class="tech-tag html">HTML</span>
-              <span class="tech-tag css">CSS</span>
-            </div>
-            <a
-              href="https://github.com/RainanKaneka/frierendle"
-              class="project-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Ver repositório
-            </a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta">Clicker like</div>
-            <h3>EA Clicker</h3>
-            <p>
-              Jogo de clique inspirado em Cookie Clicker e League of Legends,
-              usando Essências Azuis como recurso central para progressão.
-            </p>
-            <div class="tags" aria-label="Tecnologias usadas">
-              <span class="tech-tag js">JavaScript</span>
-              <span class="tech-tag html">HTML</span>
-              <span class="tech-tag css">CSS</span>
-            </div>
-            <a
-              href="https://github.com/RainanKaneka/EA_Clicker"
-              class="project-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Ver repositório
-            </a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta">RPG</div>
-            <h3>Codex</h3>
-            <p>
-              O CodexMaster é um software desktop local projetado exclusivamente para Mestres de RPG (Dungeon Masters). Ao contrário de Virtual TableTops (VTTs) convencionais, este não é um aplicativo para os jogadores. É um painel de controle privado, rápido e totalmente offline, criado para otimizar a preparação e a condução de sessões de D&D 5e.
-              Com foco absoluto em agilidade e imersão narrativa, o CodexMaster substitui seus milhares de cadernos, anotações perdidas e abas do navegador por uma interface unificada, imersiva e com uma identidade visual dark-mode medieval nativa.
-            </p>
-            <div class="tags" aria-label="Tecnologias usadas">
-              <span class="tech-tag electron">Electron</span>
-              <span class="tech-tag react">React</span>
-              <span class="tech-tag vite">Vite</span>
-              <span class="tech-tag typescript">TypeScript</span>
-              <span class="tech-tag tailwind">Tailwind CSS</span>
-            </div>
-            <a
-              href="https://github.com/RainanKaneka"
-              class="project-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Ver repositório
-            </a>
-          </article>
+        <div id="pessoais-grid" class="projects-grid three-col">
+          <!-- Projetos carregados dinamicamente via GitHub API -->
+          <p>Carregando projetos...</p>
         </div>
       </section>
 
       <section id="skills" class="section skills-section">
         <div class="section-heading">
-          <p class="eyebrow">Stack atual</p>
-          <h2>Tech Skills</h2>
+          <p class="eyebrow" data-i18n="skills_eyebrow">Stack atual</p>
+          <h2 data-i18n="skills_title">Tech Skills</h2>
         </div>
 
         <div class="skills-container" aria-label="Lista de tecnologias">
@@ -237,11 +138,11 @@
             <span>HTML</span>
           </div>
           <div class="skill css">
-            <img src="docs/img/skills/R.png" class="skill-logo" alt="" />
+            <img src="docs/img/skills/css3.png" class="skill-logo" alt="" />
             <span>CSS</span>
           </div>
           <div class="skill python">
-            <img src="docs/img/skills/pythonLogo.jpg" class="skill-logo" alt="" />
+            <img src="docs/img/skills/python.png" class="skill-logo" alt="" />
             <span>Python</span>
           </div>
           <div class="skill typescript">
@@ -249,20 +150,24 @@
             <span>TypeScript</span>
           </div>
           <div class="skill postgre">
-            <img src="docs/img/skills/postgreLogo.webp" class="skill-logo" alt="" />
+            <img src="docs/img/skills/postgre.png" class="skill-logo" alt="" />
             <span>PostgreSQL</span>
           </div>
           <div class="skill docker">
-            <img src="docs/img/skills/dockerlogo.webp" class="skill-logo" alt="" />
+            <img src="docs/img/skills/docker.png" class="skill-logo" alt="" />
             <span>Docker</span>
           </div>
         </div>
       </section>
 
       <section id="contato" class="contact-section">
-        <div>
-          <p class="eyebrow">Contato</p>
-          <h2>Vamos conversar sobre um projeto?</h2>
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="contact_eyebrow">Onde me encontrar</p>
+          <h2 data-i18n="contact_title">Entre em Contato</h2>
+          <p data-i18n="contact_desc">
+            Se você gostou do meu trabalho e quer conversar sobre
+            oportunidades, basta me mandar um e-mail ou conectar no LinkedIn.
+          </p>
         </div>
 
         <div class="contact-actions">
@@ -278,9 +183,8 @@
               alt=""
             />
           </a>
-          <button class="icon-link" id="copiarBtn" type="button">
-            <img src="docs/img/skills/Gmail-Logo.png" alt="" />
-            
+          <button class="icon-link" id="copiarBtn" type="button" data-i18n="btn_copy_email">
+            Copiar E-mail
           </button>
         </div>
 
@@ -292,6 +196,26 @@
       <p>&copy; 2026 - Desenvolvido por Rainan de Oliveira Reis</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Modal System -->
+    <div id="project-modal" class="modal-overlay" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="close-modal" aria-label="Fechar modal">&times;</button>
+        <div class="modal-header">
+          <h2 id="modal-title">Título</h2>
+          <div id="modal-tags" class="tags"></div>
+        </div>
+        <div class="modal-body">
+          <div id="modal-readme" class="markdown-body">
+            <!-- README HTML vai aqui -->
+            <p data-i18n="loading_doc">Carregando documentação...</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a id="modal-link" href="#" class="project-link btn-project" target="_blank" rel="noreferrer">Ver repositório no GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="docs/js/main.js"></script>
   </body>
 </html>
